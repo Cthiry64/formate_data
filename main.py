@@ -1,0 +1,9 @@
+import os
+os.chdir("C:/Users/cleme/Bureau/clement/travail/mpi/TIPE/sketch/officiel_scripts/exploitation_données")
+
+from test_recup_serial_data_thepy import read_and_write_data
+from use_data import creer_fichier_formate
+
+def main(chemin,arduino_port='COM4',baud_rate=9600):
+    read_and_write_data(chemin,arduino_port,baud_rate)
+    creer_fichier_formate(chemin)
